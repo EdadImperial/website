@@ -1,0 +1,89 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+const base = "text-white text-xl font-bold uppercase inline-block px-3 py-3 rounded hover:bg-yellow-500 hover:text-black";
+const active = "text-gray-900 text-xl font-bold uppercase inline-block px-3 py-3 rounded bg-yellow-400";
+---
+
+<nav>
+    <div class="pt-6 px-7 mx-auto">
+        <div class="flex justify-between">
+            <div class="flex space-x-5">
+                <!--- logo -->
+                <div>
+                    <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="svg72" x="0" y="0" style="enable-background:new 0 0 723.06 723.06" version="1.1" viewBox="0 0 723.06 723.06"
+                        ><style id="style57" type="text/css">
+                            .st3 {
+                                fill: #fc0;
+                            }
+                        </style><g id="Layer_2"><path id="path62" d="M532.8 117.19h-54a9 9 0 0 0-9 9 9 9 0 0 1-9 9h-54a9 9 0 0 1-9-9 9 9 0 0 0-9-9h-54a9 9 0 0 0-9 9 9 9 0 0 1-9 9h-54a9 9 0 0 1-9-9 9 9 0 0 0-9-9h-54a9 9 0 0 0-9 9v347.27c0 2.39.95 4.68 2.64 6.36l171 171a9.01 9.01 0 0 0 12.73 0l171-171a9 9 0 0 0 2.64-6.36V126.19a9.02 9.02 0 0 0-9.01-9z" style="fill:#333"></path></g><g id="Layer_1"
+                            ><g id="g69"
+                                ><path
+                                    id="path65"
+                                    d="M532.8 117.19h-54c-4.97 0-9 4.03-9 9s-4.03 9-9 9h-54c-4.97 0-9-4.03-9-9s-4.03-9-9-9h-54c-4.97 0-9 4.03-9 9s-4.03 9-9 9h-54c-4.97 0-9-4.03-9-9s-4.03-9-9-9h-54a9 9 0 0 0-9 9v347.27c0 2.39.95 4.68 2.64 6.36l171 171a9.01 9.01 0 0 0 12.73 0l171-171a9 9 0 0 0 2.64-6.36V126.19a9.02 9.02 0 0 0-9.01-9zm-22.37 344.07a9.6 9.6 0 0 1-2.8 6.76L368.56 607.1a9.55 9.55 0 0 1-13.51 0L215.97 468.02a9.56 9.56 0 0 1-2.8-6.76V171.75a9.55 9.55 0 0 1 9.55-9.55h278.15a9.55 9.55 0 0 1 9.55 9.55v289.51z"
+                                    class="st3"></path><path
+                                    id="path67"
+                                    d="M451.06 225.19h-21a5.25 5.25 0 0 0-5.25 5.25v10.5c0 2.9-2.35 5.25-5.25 5.25h-21a5.25 5.25 0 0 1-5.25-5.25v-10.5c0-2.9-2.35-5.25-5.25-5.25h-52.54a5.25 5.25 0 0 0-5.25 5.21l-.07 10.23a5.25 5.25 0 0 1-5.25 5.21h-21a5.25 5.25 0 0 1-5.25-5.29l.07-10.08a5.26 5.26 0 0 0-5.25-5.29h-20.98a5.25 5.25 0 0 0-5.25 5.23l-.08 23.79c0 1.39.54 2.73 1.53 3.72l28.54 28.72a5.23 5.23 0 0 1 1.53 3.7V422.5c0 1.39-.55 2.73-1.54 3.71l-17.92 17.92a5.26 5.26 0 0 0-1.54 3.71v24.08c0 2.9 2.35 5.25 5.25 5.25h157.5c2.9 0 5.25-2.35 5.25-5.25v-24.08c0-1.39-.55-2.73-1.54-3.71l-17.92-17.92a5.26 5.26 0 0 1-1.54-3.71V290.37c0-1.39.55-2.73 1.54-3.71l28.42-28.42a5.26 5.26 0 0 0 1.54-3.71v-24.08a5.25 5.25 0 0 0-5.25-5.26zm-44.26 120h-30v15h15v45h-15v-15h-30v15h-15v-45h15v-15h-30v-30h30v30h30v-30h30v30z"
+                                    class="st3"></path></g
+                            ></g
+                        ></svg
+                    >
+                </div>
+
+                <!--- primary nav --->
+                <div class="hidden md:flex items-center space-x-5">
+                    <a class={currentPath === "" ? active : base} href="/">Inicio</a>
+                    <a class={currentPath === "wiki" ? active : base} href="/wiki">Wiki</a>
+                    <a class={currentPath === "tienda" ? active : base} href="/tienda">Tienda</a>
+                </div>
+            </div>
+
+            <!--- ip -->
+            <div class="hidden md:flex items-center">
+                <a id="ip" class="text-gray-900 text-xl font-bold uppercase inline-block px-3 py-2 rounded bg-yellow-400" href="javascript:void(0)">play.edadimperial.com</a>
+            </div>
+
+            <!--- mobile button --->
+            <div class="md:hidden flex items-center text-white">
+                <button class="mobile-menu-button"
+                    ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--- mobile nav --->
+    <div class="mobile-menu hidden md:hidden">
+        <div class="pt-4 pl-5">
+            <a class="block px-3 py-3 text-white text-xl font-bold uppercase" href="/">Inicio</a>
+            <a class="block px-3 py-3 text-white text-xl font-bold uppercase" href="/wiki">Wiki</a>
+            <a class="block px-3 py-3 text-white text-xl font-bold uppercase" href="/tienda">Tienda</a>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .active {
+        background-color: #eab308;
+        color: #1a202c;
+    }
+</style>
+
+<script>
+    const ip = document.getElementById("ip")!;
+    ip.addEventListener("click", copyToClipboard);
+    function copyToClipboard() {
+        var ip = "play.edadimperial.com";
+        navigator.clipboard.writeText(ip);
+        alert("¡IP copiada al portapapeles!");
+    }
+
+    //mobile menu
+    const mobileMenuButton = document.querySelector("button.mobile-menu-button")!;
+    const mobileMenu = document.querySelector(".mobile-menu")!;
+    mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+</script>
