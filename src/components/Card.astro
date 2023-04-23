@@ -1,4 +1,7 @@
-<div class="">
-    <div class="bg-white w-64 h-64 rounded">WIP</div>
-    <h1 class="flex justify-center font-bold text-xl pt-5 text-white">WIP</h1>
+---
+const { title, emoji, href} = Astro.props;
+---
+
+<div class="mx-36">
+    <a class="bg-[#161616] h-16 rounded flex items-center px-8 text-white font-bold hover:cursor-pointer hover:scale-1" href={href}>{emoji} <span class="px-5">{title}</span></a>
 </div>

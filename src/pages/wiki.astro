@@ -7,14 +7,12 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
     <Navegation />
-    <div class="grid grid-cols-3 justify-items-center gap-5 pt-10">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+    <div class="space-y-7">
+        <Card href="wiki/reglas" title="Reglas" emoji="📜"/>
+        <Card href="wiki/minerales" title="Minerales" emoji="⛏️"/>
+        <Card href="wiki/items" title="Items" emoji="🛠️"/>
+        <Card href="wiki/mobs" title="Mobs" emoji="🧟"/>
     </div>
-
+    
     <Footer />
 </Layout>
